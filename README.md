@@ -1,37 +1,24 @@
-# referencias
-referencias endpoints json
+# vue3-practica
 
+## Project setup
+```
+npm install
+```
 
-https://my-json-server.typicode.com/Nelzio/ecommerce-fake-json/products
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-<template>
-    <h2>Componente práctica</h2>
-    <p>{{unidades}}</p>
-    <p>{{token}} <button v-show="token">login</button></p>
-    <button @click="getProductos">consultar</button>
-</template>
+### Compiles and minifies for production
+```
+npm run build
+```
 
-<script>
-export default {
-  name: 'Practica',
-  props: {
-    unidades: Number,
-    token:Boolean
-  },
-  data(){
-      return{
-          productos:[]
-      }
+### Lints and fixes files
+```
+npm run lint
+```
 
-  },
-  methods:{
-      async getProductos(){
-          let response=await this.$http.get("https://my-json-server.typicode.com/Nelzio/ecommerce-fake-json/products");
-          //console.log(response);
-          this.productos=response.data;
-          console.log(this.productos);
-
-      }
-  }
-}
-</script>
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
